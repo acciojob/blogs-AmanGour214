@@ -37,6 +37,15 @@ public class Blog {
     public Blog() {
     }
 
+    public Blog(int id, String title, String content, Date pubDate, User user, List<Image> bloglist) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.pubDate = pubDate;
+        this.user = user;
+        this.bloglist = bloglist;
+    }
+
     public List<Image> getBloglist() {
         return bloglist;
     }
