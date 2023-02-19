@@ -26,9 +26,9 @@ public class ImageService {
 
 
 
-        List<Image>updateImage=originalBlog.getBlogImages();
+        List<Image>updateImage=originalBlog.getBloglist();
         updateImage.add(newImage);
-        originalBlog.setBlogImages(updateImage);
+        originalBlog.setBloglist(updateImage);
 
         newImage.setBlog(originalBlog);
         blogRepository2.save(originalBlog);
@@ -40,7 +40,7 @@ public class ImageService {
     public void deleteImage(Integer id){
         Image image=imageRepository2.findById(id).get();
 
-        List<Image>images=image.getBlog().getBlogImages();
+        List<Image>images=image.getBlog().getBloglist();
         for(Image image1:images){
             if(image1.equals(image)){
                 images.remove(image);
