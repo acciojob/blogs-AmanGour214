@@ -22,7 +22,7 @@ public class ImageService {
 
         Image newImage=new Image();
         newImage.setDescription(description);
-        newImage.setDimension(dimensions);
+        newImage.setDimensions(dimensions);
 
 
 
@@ -57,7 +57,7 @@ public class ImageService {
 
         Image image=imageRepository2.findById(id).get();
 
-        String imagesize=image.getDimension();
+        String imagesize=image.getDimensions();
         String []imagearr=imagesize.split("X");
         int ima1=Integer.parseInt(imagearr[0]);
         int ima2=Integer.parseInt(imagearr[1]);

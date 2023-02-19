@@ -28,7 +28,7 @@ public class BlogService {
         Blog newBlog=new Blog();
         newBlog.setTitle(title);
         newBlog.setContent(content);
-        newBlog.setPostedDate(new Date());
+        newBlog.setPubDate(new Date());
 
         // setting forigen key attribute;
         newBlog.setUser(user);

@@ -19,7 +19,7 @@ public class Blog {
     private String title;
     private String content;
     @CreationTimestamp
-    private Date postedDate;
+    private Date pubDate;
 
     // blog is child for user  so i have to join the colum to user with there primary ky
     @ManyToOne
@@ -77,11 +77,11 @@ public class Blog {
         this.content = content;
     }
 
-    public Date getPostedDate() {
-        return postedDate;
+    public Date getPubDate() {
+        return pubDate;
     }
 
-    public void setPostedDate(Date postedDate) {
-        this.postedDate = postedDate;
+    public void setPubDate(Date pubDate) {
+        this.pubDate = pubDate;
     }
 }

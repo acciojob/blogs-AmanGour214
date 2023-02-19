@@ -53,11 +53,11 @@ public class Image {
         this.description = description;
     }
 
-    public String getDimension() {
+    public String getDimensions() {
         return dimensions;
     }
 
-    public void setDimension(String dimension) {
-        this.dimensions = dimension;
+    public void setDimensions(String dimensions) {
+        this.dimensions = dimensions;
     }
 }
