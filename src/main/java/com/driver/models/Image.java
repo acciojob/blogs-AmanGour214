@@ -12,7 +12,7 @@ public class Image {
 
     private String description;
     private String dimensions;
-//image is child for blog
+    //image is child for blog
     @ManyToOne
     @JoinColumn
     private Blog blog;
