@@ -46,6 +46,7 @@ public class ImageService {
                 images.remove(image);
             }
         }
+        image.getBlog().setBloglist(images);
 
         imageRepository2.delete(image);
 
