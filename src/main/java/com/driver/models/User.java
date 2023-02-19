@@ -22,7 +22,7 @@ public class User {
     // user is parent for blogs
     // threr remation is one to many why?because user can post multipal blogs;
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Blog>postedBlogs=new ArrayList<>();
+    private List<Blog>BlogList=new ArrayList<>();
 
 
 
@@ -32,6 +32,15 @@ public class User {
 
 
     public User() {
+    }
+
+    public User(int id, String username, String password, String firstName, String lastName, List<Blog> blogList) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.BlogList = blogList;
     }
 
     public int getId() {
@@ -74,11 +83,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public List<Blog> getPostedBlogs() {
-        return postedBlogs;
+    public List<Blog> getBlogList() {
+        return BlogList;
     }
 
-    public void setPostedBlogs(List<Blog> postedBlogs) {
-        this.postedBlogs = postedBlogs;
+    public void setBlogList(List<Blog> blogList) {
+        BlogList = blogList;
     }
 }

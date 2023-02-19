@@ -33,10 +33,10 @@ public class BlogService {
         // setting forigen key attribute;
         newBlog.setUser(user);
 
-        List<Blog>prePostedBlog=user.getPostedBlogs();
+        List<Blog>prePostedBlog=user.getBlogList();
         prePostedBlog.add(newBlog);
 
-        user.setPostedBlogs(prePostedBlog);
+        user.setBlogList(prePostedBlog);
         userRepository1.save(user);
 
 
