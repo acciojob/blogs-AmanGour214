@@ -28,7 +28,7 @@ public class Blog {
 
     // Blogs is parent for Image because i can post Blog without Image so that why;
     @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
-    private List<Image>bloglist=new ArrayList<>();
+    private List<Image>ImageList=new ArrayList<>();
 
 
 
@@ -37,21 +37,21 @@ public class Blog {
     public Blog() {
     }
 
-    public Blog(int id, String title, String content, Date pubDate, User user, List<Image> bloglist) {
+    public Blog(int id, String title, String content, Date pubDate, User user, List<Image> ImageList) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.pubDate = pubDate;
         this.user = user;
-        this.bloglist = bloglist;
+        this.ImageList = ImageList;
     }
 
-    public List<Image> getBloglist() {
-        return bloglist;
+    public List<Image> getImageList() {
+        return ImageList;
     }
 
-    public void setBloglist(List<Image> bloglist) {
-        this.bloglist = bloglist;
+    public void setImageList(List<Image> imageList) {
+        ImageList = imageList;
     }
 
     public User getUser() {

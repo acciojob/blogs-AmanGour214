@@ -26,9 +26,9 @@ public class ImageService {
 
 
 
-        List<Image>updateImage=originalBlog.getBloglist();
+        List<Image>updateImage=originalBlog.getImageList();
         updateImage.add(newImage);
-        originalBlog.setBloglist(updateImage);
+        originalBlog.setImageList(updateImage);
 
         newImage.setBlog(originalBlog);
         blogRepository2.save(originalBlog);
@@ -40,16 +40,15 @@ public class ImageService {
     public void deleteImage(Integer id){
         Image image=imageRepository2.findById(id).get();
 
-        List<Image>images=image.getBlog().getBloglist();
+        List<Image>images=image.getBlog().getImageList();
         for(Image image1:images){
             if(image1.equals(image)){
                 images.remove(image);
             }
         }
-        image.getBlog().setBloglist(images);
+        image.getBlog().setImageList(images);
 
         imageRepository2.delete(image);
-
     }
 
     public int countImagesInScreen(Integer id, String screenDimensions) {
