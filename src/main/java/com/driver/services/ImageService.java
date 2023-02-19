@@ -22,7 +22,8 @@ public class ImageService {
 
         Image newImage=new Image();
         newImage.setDescription(description);
-        newImage.setDimension(description);
+        newImage.setDimension(dimensions);
+
 
 
         List<Image>updateImage=originalBlog.getBlogImages();

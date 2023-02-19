@@ -27,7 +27,7 @@ public class Blog {
     private User user;
 
     // Blogs is parent for Image because i can post Blog without Image so that why;
-    @OneToMany
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
     private List<Image>blogImages=new ArrayList<>();
 
 

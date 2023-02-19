@@ -15,8 +15,8 @@ public class User {
     private String userName;
     private String passWord;
 
-    private String firstName;
-    private String lastName;
+    private String firstName="test";
+    private String lastName="test";
 
     // mapping blog with user
     // user is parent for blogs

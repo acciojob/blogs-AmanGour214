@@ -28,17 +28,18 @@ public class BlogService {
         Blog newBlog=new Blog();
         newBlog.setTitle(title);
         newBlog.setContent(content);
+        newBlog.setPostedDate(new Date());
 
         // setting forigen key attribute;
+        newBlog.setUser(user);
 
         List<Blog>prePostedBlog=user.getPostedBlogs();
         prePostedBlog.add(newBlog);
 
         user.setPostedBlogs(prePostedBlog);
-
-        newBlog.setUser(user);
-
         userRepository1.save(user);
+
+
         return newBlog;
 
     }
