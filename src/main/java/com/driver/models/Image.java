@@ -11,7 +11,7 @@ public class Image {
     private int id;
 
     private String description;
-    private String dimension;
+    private String dimensions;
 //image is child for blog
     @ManyToOne
     @JoinColumn
@@ -21,6 +21,12 @@ public class Image {
 
 
     public Image() {
+    }
+
+    public Image(String description, String dimensions, Blog blog) {
+        this.description = description;
+        this.dimensions = dimensions;
+        this.blog = blog;
     }
 
     public Blog getBlog() {
@@ -48,10 +54,10 @@ public class Image {
     }
 
     public String getDimension() {
-        return dimension;
+        return dimensions;
     }
 
     public void setDimension(String dimension) {
-        this.dimension = dimension;
+        this.dimensions = dimension;
     }
 }
